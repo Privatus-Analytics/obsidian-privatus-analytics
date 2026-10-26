@@ -1,0 +1,10 @@
+{
+	"id": "privatus-analytics",
+	"name": "Privatus Analytics",
+	"version": "1.0.0",
+	"minAppVersion": "1.11.4",
+	"description": "Show live website stats from Privatus Analytics in your notes, and insert a weekly traffic summary as Markdown.",
+	"author": "Privatus Analytics",
+	"authorUrl": "https://privatusanalytics.com",
+	"isDesktopOnly": false
+}

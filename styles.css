@@ -1,0 +1,165 @@
+/* Privatus Analytics stats card. Uses Obsidian theme variables so it fits light and dark themes. */
+
+.privatus-card {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+	padding: var(--size-4-3) var(--size-4-4);
+	background: var(--background-primary-alt);
+	font-size: var(--font-ui-small);
+}
+
+.privatus-card-loading,
+.privatus-card-empty {
+	color: var(--text-muted);
+}
+
+.privatus-card-message {
+	color: var(--text-muted);
+}
+
+.privatus-card-message ul {
+	margin: var(--size-4-1) 0 0;
+}
+
+.privatus-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--size-4-2);
+	margin-bottom: var(--size-4-3);
+}
+
+.privatus-card-title {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: var(--size-4-2);
+}
+
+.privatus-card-site {
+	font-weight: var(--font-semibold);
+	font-size: var(--font-ui-medium);
+}
+
+.privatus-card-period {
+	color: var(--text-muted);
+}
+
+.privatus-card-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-2);
+}
+
+.privatus-card-live {
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+.privatus-card-live::before {
+	content: "";
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	margin-right: 5px;
+	border-radius: 50%;
+	background: var(--color-green);
+	vertical-align: middle;
+}
+
+.privatus-card-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+	gap: var(--size-4-3);
+}
+
+.privatus-card-metric-label {
+	color: var(--text-muted);
+}
+
+.privatus-card-metric-value {
+	font-size: 1.5em;
+	font-weight: var(--font-semibold);
+	font-variant-numeric: tabular-nums;
+}
+
+.privatus-card-metric-change {
+	font-variant-numeric: tabular-nums;
+}
+
+.privatus-card-metric-change.is-up {
+	color: var(--color-green);
+}
+
+.privatus-card-metric-change.is-down {
+	color: var(--color-red);
+}
+
+.privatus-card-metric-change.is-flat {
+	color: var(--text-muted);
+}
+
+.privatus-card-spark {
+	margin: var(--size-4-3) 0;
+	height: 48px;
+}
+
+.privatus-card-spark svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.privatus-card-spark-line {
+	stroke: var(--interactive-accent);
+	stroke-width: 2;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+.privatus-card-spark-area {
+	fill: var(--interactive-accent);
+	opacity: 0.12;
+}
+
+.privatus-card-lists {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: var(--size-4-4);
+}
+
+.privatus-card-list-head {
+	display: flex;
+	justify-content: space-between;
+	color: var(--text-muted);
+	margin-bottom: var(--size-4-1);
+}
+
+.privatus-card-row {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: var(--size-4-2);
+	padding: 2px var(--size-4-1);
+}
+
+.privatus-card-bar {
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: var(--privatus-bar, 0%);
+	background: var(--interactive-accent);
+	opacity: 0.12;
+	border-radius: var(--radius-s);
+}
+
+.privatus-card-row-label {
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.privatus-card-row-value {
+	position: relative;
+	font-variant-numeric: tabular-nums;
+}
